@@ -1,0 +1,16 @@
+.body-content {
+
+    width: 50%;
+    margin: auto;
+    margin-top: 20px;
+    padding-top: 60px;
+
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    /* optional spacing between items */
+}
+

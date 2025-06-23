@@ -1,0 +1,69 @@
+.header {
+    font-family: "Rubik Iso", system-ui;
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, .1);
+    z-index: 100;
+    background-color: white;
+}
+
+
+.logo {
+    display: inline-flex;
+    align-items: center;
+}
+
+.logo>img {
+    display: inline-block;
+    width: 70px;
+    height: 70px;
+
+}
+
+.logo>h1 {
+    display: inline-block;
+    margin: 0 0 0 0;
+    font-size: 50px;
+}
+
+.search {
+    display: flex;
+    margin-right: 10px;
+    align-items: center;
+    width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    padding: 5px 10px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.search>input {
+    flex: 1;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    padding: 8px;
+    border-radius: 25px;
+    background: transparent;
+}
+
+.search>button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.search>button:hover {
+    background-color: #0056b3;
+}
