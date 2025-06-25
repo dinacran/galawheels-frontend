@@ -1,7 +1,33 @@
 import { CDN_URL } from '../../constants';
-import './VehicleCard.css';
 import ImageSlider from '../ImageSlider/ImageSlider.jsx';
+import './VehicleCard.css';
 
+function Chunk({ field, value }) {
+    return (
+        <div className="chunk">
+            <h1 className="chunk-title">{field}</h1>
+            <div className="chunk-value">{value}</div>
+        </div>
+    )
+}
+
+function Details({ vehicle }) {
+    return (
+        <div className='details-container'>
+            <div className='title'>{vehicle.name}</div>
+            <div className='details'>
+                {
+                    Object.entries(vehicle).map(([key, value]) => {
+                        if (key !== "name" && key !== "id" && key !== "imagePath"  && key !=="model" && key !=="brand") {
+                            return <Chunk field={key} value={value} />
+                        }
+                    })
+                }
+
+            </div>
+        </div>
+    )
+}
 function VehicleCard({ vehicle }) {
     var images = [];
     const vehicleName = vehicle.name.replace(/ /g, "_");
@@ -12,15 +38,7 @@ function VehicleCard({ vehicle }) {
     return (
         <div className="vehicle-card">
             <ImageSlider images={images} />
-            <span className='details'>
-                <h2>{vehicle.name}</h2>
-                <p>price: {vehicle.price}</p>
-                <p>model: {vehicle.model}</p>
-                <p>power: {vehicle.power}</p>
-                <p>bore: {vehicle.bore}</p>
-                <p>stroke: {vehicle.stroke}</p>
-                <p>compression ratio: {vehicle.compressionRatio}</p>
-            </span>
+            <Details vehicle={vehicle} />
         </div>
 
     );

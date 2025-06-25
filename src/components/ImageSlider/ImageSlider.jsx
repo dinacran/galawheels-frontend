@@ -1,5 +1,6 @@
-import  { useState } from 'react';
+import { useState } from 'react';
 import './ImageSlider.css';
+
 
 const ImageSlider = ({ images }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -15,7 +16,7 @@ const ImageSlider = ({ images }) => {
   return (
     <div className="slider-container">
       <button className="arrow left" onClick={goToPrevious}>&lt;</button>
-      <img src={images[currentIndex]} alt="bike" className="slider-image" />
+      <img src={images[currentIndex]} alt="motorcycle" className="slider-image" />
       <button className="arrow right" onClick={goToNext}>&gt;</button>
     </div>
   );

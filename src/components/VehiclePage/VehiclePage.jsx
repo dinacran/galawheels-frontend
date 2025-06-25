@@ -1,12 +1,11 @@
 import Header from '../Header/Header.jsx'
 import VehicleCard from '../Card/VehicleCard.jsx'
 
-
 import { useParams } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 
 function VehiclePage() {
-  const { id } = useParams(); // e.g., yamaha-r15
+  const { id } = useParams(); 
   const [vehicle, setVehicle] = useState(null);
 
   useEffect(() => {

@@ -11,6 +11,5 @@
     display: flex;
     flex-wrap: wrap;
     gap: 16px;
-    /* optional spacing between items */
 }
 

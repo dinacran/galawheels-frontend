@@ -1,5 +1,6 @@
-import './Header.css';
+import { Link } from 'react-router-dom';
 import logo from '../../assets/logo.png';
+import './Header.css';
 
 
 function Header() {
@@ -10,7 +11,7 @@ function Header() {
   };
 
   return (
-    <div className="header">
+    <Link to="/" className="header">
       <span className="left">
         <span className="logo">
           <img src={logo} alt="logo" />
@@ -23,7 +24,7 @@ function Header() {
           <button onClick={handleSearch}>🔍</button>
         </div>
       </span>
-    </div>
+    </Link>
   );
 }
 
