@@ -18,12 +18,11 @@ function Details({ vehicle }) {
             <div className='details'>
                 {
                     Object.entries(vehicle).map(([key, value]) => {
-                        if (key !== "name" && key !== "id" && key !== "imagePath"  && key !=="model" && key !=="brand") {
-                            return <Chunk field={key} value={value} />
+                        if (key !== "name" && key !== "id" && key !== "imagePath" && key !== "model" && key !== "brand") {
+                            return <Chunk key={key} field={key} value={value} />
                         }
                     })
                 }
-
             </div>
         </div>
     )

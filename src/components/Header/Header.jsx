@@ -11,20 +11,21 @@ function Header() {
   };
 
   return (
-    <Link to="/" className="header">
+    <div className="header">
       <span className="left">
-        <span className="logo">
+        <Link to="/" className="logo">
           <img src={logo} alt="logo" />
           <h1>galawheels</h1>
-        </span>
+        </Link>
       </span>
+
       <span className="right">
         <div className="search">
-          <input type="text" placeholder="Search" />
+          <input onInput={handleSearch} type="text" placeholder="Search" />
           <button onClick={handleSearch}>🔍</button>
         </div>
       </span>
-    </Link>
+    </div>
   );
 }
 
