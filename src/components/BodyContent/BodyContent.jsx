@@ -18,7 +18,7 @@ function BodyContent() {
             <h1>Top Vehicles</h1>
             <div className="cards">
                 {vehicles.map(vehicle => (
-                    <FlexCard vehicle={vehicle} />
+                    <FlexCard key={vehicle.id} vehicle={vehicle} />
                 ))}
             </div>
         </div>

@@ -1,14 +1,11 @@
 import { Link } from 'react-router-dom';
 import logo from '../../assets/logo.png';
 import './Header.css';
+import { useState } from 'react';
+import SearchBox from '../SearchBox/SearchBox.jsx';
 
 
 function Header() {
-  const handleSearch = (e) => {
-    e.preventDefault();
-    const query = document.querySelector('input').value;
-    console.log(`Searching for ${query}`);
-  };
 
   return (
     <div className="header">
@@ -20,10 +17,11 @@ function Header() {
       </span>
 
       <span className="right">
-        <div className="search">
+        {/* <div className="search">
           <input onInput={handleSearch} type="text" placeholder="Search" />
           <button onClick={handleSearch}>🔍</button>
-        </div>
+        </div> */}
+        <SearchBox />
       </span>
     </div>
   );
